@@ -104,7 +104,7 @@ data={
 Pour obtenir la liste de messages d'un dossier faites `POST /eleves/{identifiant}/messages.awp?force=false&typeRecuperation=classeur&idClasseur={id du classeur}&orderBy=date&order=desc&query=&onlyRead=&page=0&itemsPerPage=100&getAll=0&verbe=get&v=4.97.0`
 
 ### Marquer comme lu/non lu
-```json title=POST /eleves/{identifiant}/messages.awp?verbe=put&v=7.12.1
+```json title="POST /eleves/{identifiant}/messages.awp?verbe=put&v=7.12.1"
 data={
     "action": "marquerCommeNonLu", // ou marquerCommeLu
     "ids": [
@@ -115,7 +115,7 @@ data={
 ```
 
 ### Archiver/désarchiver
-```json title=POST /eleves/{identifiant}/messages.awp?verbe=put&v=7.12.1
+```json title="POST /eleves/{identifiant}/messages.awp?verbe=put&v=7.12.1"
 data={
     "action": "archiver", // Ou alors desarchiver pour désarchiver
     "ids": [
@@ -126,7 +126,7 @@ data={
 ```
 
 ### Déplacer
-```json title=POST /eleves/{identifiant}/messages.awp?verbe=put&v=7.12.1
+```json title="POST /eleves/{identifiant}/messages.awp?verbe=put&v=7.12.1"
 data={
     "action": "deplacer",
     "idClasseur": 275, //ID du nouveau dossier, 0 pour boîte de réception
@@ -137,12 +137,12 @@ data={
 ```
 
 ### Supprimer dossier
-```json title=POST /messagerie/classeur/{id du classeur}.awp?verbe=delete&v=7.12.1
+```json title="POST /messagerie/classeur/{id du classeur}.awp?verbe=delete&v=7.12.1"
 data={}
 ```
 
 ### Créer dossier
-```json title= POST /messagerie/classeurs.awp?verbe=post&v=7.12.1
+```json title="POST /messagerie/classeurs.awp?verbe=post&v=7.12.1"
 data={
     "libelle": "Test" //NOM DU DOSSIER
 }
