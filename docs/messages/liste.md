@@ -103,12 +103,12 @@ data={
 
 Pour obtenir la liste de messages d'un dossier faites `POST /eleves/{identifiant}/messages.awp?force=false&typeRecuperation=classeur&idClasseur={id du classeur}&orderBy=date&order=desc&query=&onlyRead=&page=0&itemsPerPage=100&getAll=0&verbe=get&v=4.97.0`
 
-### Marquer comme non lu
+### Marquer comme lu/non lu
 ```json title=POST /eleves/{identifiant}/messages.awp?verbe=put&v=7.12.1
 data={
-    "action": "marquerCommeNonLu",
+    "action": "marquerCommeNonLu", // ou marquerCommeLu
     "ids": [
-        39354 // Identifiants des messages à marquer comme non lus
+        39354 // Identifiants des messages à marquer comme non lus ou lus
     ],
     "anneeMessages": "2025-2026" // Année scolaire des messages
 }
