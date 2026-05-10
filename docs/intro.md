@@ -17,6 +17,10 @@ L'URL de base pour toutes les requêtes est :
 
 La version documentée ici est la **v7.12.1**. Bien que des versions plus récentes puissent exister, les changements structurels majeurs sont rares. Cette documentation reste valide tant que la version v7.12.1 est supportée.
 
+:::warning
+Certaines parties de cette documentation indiquent la v4.97.0, mais c'est incorrect. La vraie version (même dans les query URL) est 7.12.1
+:::
+
 ## 🛡️ User-Agent & Headers
 
 L'utilisation d'un **User-Agent** valide est obligatoire pour chaque requête. Sans cela, EcoleDirecte bloquera vos appels API. Il est obligatoire d'utiliser le même User-Agent tout au long de votre session.
