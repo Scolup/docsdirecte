@@ -1,0 +1,816 @@
+=== [XHR] POST https://api.ecoledirecte.com/v3/eleves/2852/qcms/0/associations.awp?verbe=get&v=4.100.0 ===
+TIME: 17:00:28
+-- REQUEST --
+Headers: {
+  "Content-Type": "application/x-www-form-urlencoded",
+  "X-Token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d",
+  "2FA-Token": "3f6c286c-6006-4ffb-85fc-c8e7808e1b86",
+  "Accept": "application/json, text/plain, */*"
+}
+Cookies: TEDGEPT={"Site":"www.ecoledirecte.com","uri":"/login","User-Agent":"Mozilla/5.0 (Macintosh
+Body: data={}
+-- RESPONSE --
+Status: 200
+Headers: {
+  "cache-control": "no-cache",
+  "content-length": "165",
+  "content-type": "application/json",
+  "expires": "Thu, 01 Dec 1998 16:00:00 GMT",
+  "pragma": "no-cache",
+  "x-code": "200",
+  "x-token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d"
+}
+Data: {"code":200, "token":"d04ce64f-6afa-4cff-9fa7-6ce737e5f98d", "host":"HTTP126", "data":[{"idQCM":149, "titre":" Le tourisme et ses espaces 4A", "idAssociation":237}]}
+
+--------------------------------------------------
+
+=== [XHR] POST https://api.ecoledirecte.com/v3/eleves/2852/qcms/149/associations/237.awp?verbe=get&v=4.100.0 ===
+TIME: 17:00:28
+-- REQUEST --
+Headers: {
+  "Content-Type": "application/x-www-form-urlencoded",
+  "X-Token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d",
+  "2FA-Token": "3f6c286c-6006-4ffb-85fc-c8e7808e1b86",
+  "Accept": "application/json, text/plain, */*"
+}
+Cookies: TEDGEPT={"Site":"www.ecoledirecte.com","uri":"/login","User-Agent":"Mozilla/5.0 (Macintosh
+Body: data={
+    "anneeQCMs": "2025-2026"
+}
+-- RESPONSE --
+Status: 200
+Headers: {
+  "cache-control": "no-cache",
+  "content-length": "10853",
+  "content-type": "application/json",
+  "expires": "Thu, 01 Dec 1998 16:00:00 GMT",
+  "pragma": "no-cache",
+  "x-code": "200",
+  "x-token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d"
+}
+Data: {"code":200, "token":"d04ce64f-6afa-4cff-9fa7-6ce737e5f98d", "host":"HTTP156", "data":{"questions":[{"id":2819, "question":"UTkgLSBRdWVscyBzb250IGxlcyBlZmZldHMgbsOpZ2F0aWZzIGR1IHRvdXJpc21lIMOgIFB1bnRhIENhbmEgPw==", "enonce":"PHA+MiByw6lwb25zZXMgYXR0ZW5kdWVzPC9wPg==", "titreSon":"", "srcSon":"", "typeQ":"checkbox", "propositions":[{"id":12922, "enonce":"TGVzIGZvbmRzIG1hcmlucyAoY29yYXV4KSBzb250IGZyYWdpbGlzw6lzIHBhciBsZXMgcmVqZXRzIGQnZWF1eCB1c8OpZXM="},{"id":12923, "enonce":"TGEgcsOpZ2lvbiBhIHN1YmkgdW5lIGdyYXZlIGTDqWZvcmVzdGF0aW9u"},{"id":12924, "enonce":"TGVzIGdyb3VwZXMgaMO0dGVsaWVycyBvbnQgY3LDqcOpIHVuZSBmb25kYXRpb24gw6ljb2xvZ2lxdWU="},{"id":12925, "enonce":"TCdpbmRpY2F0ZXVyIGRlIGTDqXZlbG9wcGVtZW50IGh1bWFpbiAoSURIKSBwcm9ncmVzc2U="}]},{"id":2814, "question":"UTQgLSBRdWVsbGUgZXN0IGxhIGxhbmd1ZSBvZmZpY2llbGxlIGVuIFLDqXB1YmxpcXVlIGRvbWluaWNhaW5lID8=", "enonce":"", "titreSon":"", "srcSon":"", "typeQ":"radio", "propositions":[{"id":12902, "enonce":"QW5nbGFpcw=="},{"id":12903, "enonce":"RnJhbsOnYWlz"},{"id":12904, "enonce":"UG9ydHVnYWlz"},{"id":12905, "enonce":"RXNwYWdub2w="}]},{"id":2825, "question":"UTE1IC0gTGUgdG91cmlzbWUgY29uY2VudHJhbnQgdW4gZ3JhbmQgbm9tYnJlIGRlIHBlcnNvbm5lcyBlc3QgYXBwZWzDqSA6", "enonce":"", "titreSon":"", "srcSon":"", "typeQ":"radio", "propositions":[{"id":12946, "enonce":"dG91cmlzbWUgZGUgY2xhc3Nl"},{"id":12947, "enonce":"dG91cmlzbWUgdmVydA=="},{"id":12948, "enonce":"dG91cmlzbWUgc29saWRhaXJl"},{"id":12949, "enonce":"dG91cmlzbWUgZGUgbWFzc2U="}]},{"id":2817, "question":"UTcgLSBRdWVsbGVzIHNvbnQgbGVzIGNhcmFjdMOpcmlzdGlxdWVzIGRlcyBow7R0ZWxzIGRlIFB1bnRhIENhbmEgPw==", "enonce":"PHA+QXR0ZW50aW9uIGlsIHkgYSAzIHImZWFjdXRlO3BvbnNlcyAmYWdyYXZlOyBjb2NoZXI8L3A+Cg==", "titreSon":"", "srcSon":"", "typeQ":"checkbox", "propositions":[{"id":12914, "enonce":"SWxzIHByb3Bvc2VudCBkZXMgc8Opam91cnMgdG91dCBpbmNsdXMgYXZlYyBhY2PDqHMgYXV4IGFjdGl2aXTDqXMgKHBpc2NpbmVzLCBnb2xmcy4uLik="},{"id":12915, "enonce":"SWxzIHNvbnQgc2l0dcOpcyBqdXN0ZSBkZXZhbnQgbGVzIHBsYWdlcw=="},{"id":12916, "enonce":"T24geSBhY2PDqGRlIGRpcmVjdGVtZW50IGRlcHVpcyBsJ2HDqXJvcG9ydCBpbnRlcm5hdGlvbmFsIHF1aSBkZXNzZXJ0IGxhIHN0YXRpb24="},{"id":12917, "enonce":"SWxzIGFjY3VlaWxsZW50IGJlYXVjb3VwIGRlIHRvdXJpc3RlcyBsb2NhdXggZG9taW5pY2FpbnM="}]},{"id":2827, "question":"UTE3IC0gRCdhcHLDqHMgdG9pLCBkYW5zIGxlIHNlY3RldXIgdG91cmlzdGlxdWUsIGwnZXhwcmVzc2lvbiAib3IgYmxhbmMiIGTDqXNpZ25lIC4uLg==", "enonce":"", "titreSon":"", "srcSon":"", "typeQ":"radio", "propositions":[{"id":12954, "enonce":"TGVzIHNwb3J0cyBkJ2hpdmVyIGV0IGxldXJzIHJlY2V0dGVz"},{"id":12955, "enonce":"TCdleHBsb2l0YXRpb24gZCd1biBtw6l0YWwgcHLDqWNpZXV4"},{"id":12956, "enonce":"TCfDqW5lcmdpZSBoeWRyYXVsaXF1ZQ=="},{"id":12957, "enonce":"TGVzIG1pbmVzIGRlIHNlbA=="}]},{"id":2829, "question":"UTE5IC0gTGVzIGLDqW7DqWZpY2VzIGR1IHRvdXJpc21lIHNvbnQgYXBwZWzDqXMgLi4u", "enonce":"", "titreSon":"", "srcSon":"", "typeQ":"radio", "propositions":[{"id":12962, "enonce":"TGVzIGRpdmlkZW5kZXM="},{"id":12963, "enonce":"TGVzIHByb2ZpdHM="},{"id":12964, "enonce":"TGVzIHJlY2V0dGVz"},{"id":12965, "enonce":"TGVzIGTDqXBlbnNlcw=="}]},{"id":2821, "question":"UTExIC0gSmUgc3VpcyBsZSAgcGF5cyBsZSBwbHVzIHZpc2l0w6kgYXUgbW9uZGUgOg==", "enonce":"", "titreSon":"", "srcSon":"", "typeQ":"radio", "propositions":[{"id":12930, "enonce":"TGEgRnJhbmNl"},{"id":12931, "enonce":"TCdFc3BhZ25l"},{"id":12932, "enonce":"TGVzIEV0YXRzLVVuaXM="},{"id":12933, "enonce":"TGEgQ2hpbmU="}]},{"id":2824, "question":"UTE0IC0gVW5lIGNvbXBhZ25pZSBhw6lyaWVubmUgw6AgYmFzIGNvw7t0IGVzdCBhcHBlbMOpZSA6", "enonce":"", "titreSon":"", "srcSon":"", "typeQ":"radio", "propositions":[{"id":12942, "enonce":"VW5lIGNvbXBhZ25pZSBjb29sIHdhdmU="},{"id":12943, "enonce":"VW5lIGNvbXBhZ25pZSBsb3cgY29zdA=="},{"id":12944, "enonce":"VW5lIGNvbXBhZ25pZSBjaGVhcCBmbGlnaHQ="},{"id":12945, "enonce":"VW5lIGNvbXBhZ25pZSBsb3cgcHJpY2U="}]},{"id":2823, "question":"UTEzIC0gVW5lIHN0YXRpb24gdG91cmlzdGlxdWUgZW4gYm9yZCBkZSBtZXIgZXN0IGFwcGVsbMOpZSA6", "enonce":"", "titreSon":"", "srcSon":"", "typeQ":"radio", "propositions":[{"id":12938, "enonce":"U3RhdGlvbiB0aGVybWFsZQ=="},{"id":12939, "enonce":"U3RhdGlvbiBzcGF0aWFsZQ=="},{"id":12940, "enonce":"U3RhdGlvbiBkZSBza2k="},{"id":12941, "enonce":"U3RhdGlvbiBiYWxuw6lhaXJl"}]},{"id":2816, "question":"UTYgLSBFbiAyMDE0LCBjb21iaWVuIGRlIHRvdXJpc3RlcyBpbnRlcm5hdGlvbmF1eCBvbnQgc8Opam91cm7DqSBlbiBSw6lwdWJsaXF1ZSBkb21pbmljYWluZSAoZW4gbWlsbGlvbnMpID8=", "enonce":"", "titreSon":"", "srcSon":"", "typeQ":"radio", "propositions":[{"id":12910, "enonce":"MyBtaWxsaW9ucw=="},{"id":12911, "enonce":"MSw3IG0u"},{"id":12912, "enonce":"MjIgbS4="},{"id":12913, "enonce":"NSwxIG0u"}]},{"id":2826, "question":"UTE2IC0gTGVzIG5vdXZlbGxlcyBmb3JtZXMgZGUgdG91cmlzbWUgcHJpdmlsw6lnaWVudCA6", "enonce":"PHA+MiByw6lwb25zZXMgYXR0ZW5kdWVzPC9wPg==", "titreSon":"", "srcSon":"", "typeQ":"checkbox", "propositions":[{"id":12950, "enonce":"TCdhbcOpbmFnZW1lbnQgZGUgZ3JhbmRzIHBhcmNzIGQnYXR0cmFjdGlvbnMgKERpc25leSk="},{"id":12951, "enonce":"TCdow6liZXJnZW1lbnQgZGFucyBkZXMgcGV0aXRlcyBzdHJ1Y3R1cmVz"},{"id":12952, "enonce":"VW5lIGV4cMOpcmllbmNlIGRpZmbDqXJlbnRlIGR1IHZveWFnZSwgcGx1cyByZXNwZWN0dWV1c2UgZGVzIHBvcHVsYXRpb25zIGxvY2FsZXM="},{"id":12953, "enonce":"TGEgY29uc3RydWN0aW9uIGRlIGNvbXBsZXhlcyBow7R0ZWxpZXJzIGfDqWFudHM="}]},{"id":2813, "question":"UTMgLSBEYW5zIGNldHRlIGxpc3RlLCB0b3VzIGxlcyBwYXlzIHNvbnQgZGFucyBsYSBtw6ptZSB6b25lIGfDqW9ncmFwaGlxdWUuIE1haXMgcXVlbCBlc3QgbCdpbnRydXMgPw==", "enonce":"", "titreSon":"", "srcSon":"", "typeQ":"radio", "propositions":[{"id":12898, "enonce":"UG9ydG8gUmljbw=="},{"id":12899, "enonce":"VGFoaXRp"},{"id":12900, "enonce":"Q3ViYQ=="},{"id":12901, "enonce":"SmFtYcOvcXVl"}]},{"id":2822, "question":"UTEyIC0gSmUgc3VpcyBsJ3VuIGRlcyBkZXV4IHBsdXMgZ3JhbmRzIGJhc3NpbnMgdG91cmlzdGlxdWVzIG1vbmRpYXV4IDo=", "enonce":"", "titreSon":"", "srcSon":"", "typeQ":"radio", "propositions":[{"id":12934, "enonce":"R29sZmUgcGVyc2lxdWU="},{"id":12935, "enonce":"TWVyIE3DqWRpdGVycmFuw6ll"},{"id":12936, "enonce":"TWVyIGR1IE5vcmQ="},{"id":12937, "enonce":"TWVyIE5vaXJl"}]},{"id":2820, "question":"UTEwIC0gUXVlbHMgc29udCBsZXMgcHJpbmNpcGF1eCBww7RsZXMgw6ltZXR0ZXVycyBkdSB0b3VyaXNtZSBtb25kaWFsID8=", "enonce":"PHA+MyByw6lwb25zZXMgYXR0ZW5kdWVzPC9wPg==", "titreSon":"", "srcSon":"", "typeQ":"checkbox", "propositions":[{"id":12926, "enonce":"TW95ZW4tT3JpZW50"},{"id":12927, "enonce":"QXNpZSBvcmllbnRhbGU="},{"id":12928, "enonce":"RXVyb3Bl"},{"id":12929, "enonce":"QW3DqXJpcXVlIGR1IE5vcmQ="}]},{"id":2828, "question":"UTE4IC0gUXVlbGxlIGVzdCBsYSB2aWxsZSBsYSBwbHVzIHZpc2l0w6llIGF1IG1vbmRlID8=", "enonce":"", "titreSon":"", "srcSon":"", "typeQ":"radio", "propositions":[{"id":12958, "enonce":"TmV3IFlvcms="},{"id":12959, "enonce":"VG9reW8="},{"id":12960, "enonce":"Um9tZQ=="},{"id":12961, "enonce":"UGFyaXM="}]},{"id":2815, "question":"UTUgLSBFbnRyZSAxOTk1IGV0IDIwMTQsIGxlIG5vbWJyZSBkZSB0b3VyaXN0ZXMgZW4gUsOpcHVibGlxdWUgZG9taW5pY2FpbmUgYSDDqXTDqSAuLi4=", "enonce":"", "titreSon":"", "srcSon":"", "typeQ":"radio", "propositions":[{"id":12906, "enonce":"bXVsdGlwbGnDqSBwYXIgMw=="},{"id":12907, "enonce":"bXVsdGlwbGnDqSBwYXIgMTA="},{"id":12908, "enonce":"ZGl2aXPDqSBwYXIgMg=="},{"id":12909, "enonce":"bXVsdGlwbGnDqSBwYXIgMg=="}]},{"id":2812, "question":"UTIgLSBMZXMgZmx1eCB0b3VyaXN0aXF1ZXMgZW4gUsOpcHVibGlxdWUgZG9taW5pY2FpbmUgdmllbm5lbnQgc3VydG91dCAuLi4=", "enonce":"PHA+MiByJmVhY3V0ZTtwb25zZXMgYXR0ZW5kdWVzPC9wPgo=", "titreSon":"", "srcSon":"", "typeQ":"checkbox", "propositions":[{"id":12894, "enonce":"RGUgbGEgQ2hpbmU="},{"id":12895, "enonce":"RGUgbCdBbcOpcmlxdWUgZHUgTm9yZA=="},{"id":12896, "enonce":"RGUgbCdFdXJvcGU="},{"id":12897, "enonce":"RGUgbCdBZnJpcXVl"}]},{"id":2818, "question":"UTggLSBRdWVscyBzb250IGxlcyBlZmZldHMgcG9zaXRpZnMgZHUgdG91cmlzbWUgw6AgUHVudGEgQ2FuYSA/", "enonce":"PHA+MiByw6lwb25zZXMgYXR0ZW5kdWVzPC9wPg==", "titreSon":"", "srcSon":"", "typeQ":"checkbox", "propositions":[{"id":12918, "enonce":"TGUgdG91cmlzbWUgZXN0IHVuIHNlY3RldXIgcXVpIGTDqXZlbG9wcGUgbCfDqWNvbm9taWUgZHUgcGF5cw=="},{"id":12919, "enonce":"TGVzIHRvdXJpc3RlcyBhcHByZW5uZW50IGxhIGxhbmd1ZSBldCBsZXMgdHJhZGl0aW9ucyBsb2NhbGVz"},{"id":12920, "enonce":"RGUgbm91dmVsbGVzIGluZnJhc3RydWN0dXJlcyBkZSB0cmFuc3BvcnQgKGHDqXJvcG9ydCkgc29udCBhbcOpbmFnw6llcw=="},{"id":12921, "enonce":"TGVzIGVtcGxvaXMgZGFucyBsZSBzZWN0ZXVyIGR1IHRvdXJpc21lIHNvbnQgYmllbiBwYXnDqXM="}]},{"id":2830, "question":"UTIwIC0gw6AgUHVudGEgQ2FuYSwgY29tYmllbiBkw6lub21icmUtdC1vbiBkZSBncmFuZHMgY29tcGxleGVzIGjDtHRlbGllcnMgYXZlYyBwaXNjaW5lcyA/", "enonce":"", "titreSon":"", "srcSon":"", "typeQ":"radio", "propositions":[{"id":12966, "enonce":"NQ=="},{"id":12967, "enonce":"VW5lIHZpbmd0YWluZQ=="},{"id":12968, "enonce":"VW5lIGNlbnRhaW5l"},{"id":12969, "enonce":"RGVzIG1pbGxpZXJz"}]},{"id":2811, "question":"UTEgLSBEYW5zIHF1ZWxsZSByw6lnaW9uIGR1IG1vbmRlIHNlIHNpdHVlIGxhIHN0YXRpb24gZGUgUHVudGEgQ2FuYSA/", "enonce":"", "titreSon":"", "srcSon":"", "typeQ":"radio", "propositions":[{"id":12890, "enonce":"T2PDqWFuIFBhY2lmaXF1ZQ=="},{"id":12891, "enonce":"QmFzc2luIG3DqWRpdGVycmFuw6llbg=="},{"id":12892, "enonce":"Q2FyYcOvYmVz"},{"id":12893, "enonce":"T2PDqWFuIEluZGllbg=="}]}], "reponses":[{"id":91943, "idQuestion":2819, "idParticipant":5904, "choix":[  ]},{"id":91944, "idQuestion":2814, "idParticipant":5904, "choix":null},{"id":91945, "idQuestion":2825, "idParticipant":5904, "choix":null},{"id":91946, "idQuestion":2817, "idParticipant":5904, "choix":[  ]},{"id":91947, "idQuestion":2827, "idParticipant":5904, "choix":null},{"id":91948, "idQuestion":2829, "idParticipant":5904, "choix":null},{"id":91949, "idQuestion":2821, "idParticipant":5904, "choix":null},{"id":91950, "idQuestion":2824, "idParticipant":5904, "choix":null},{"id":91951, "idQuestion":2823, "idParticipant":5904, "choix":null},{"id":91952, "idQuestion":2816, "idParticipant":5904, "choix":null},{"id":91953, "idQuestion":2826, "idParticipant":5904, "choix":[  ]},{"id":91954, "idQuestion":2813, "idParticipant":5904, "choix":null},{"id":91955, "idQuestion":2822, "idParticipant":5904, "choix":null},{"id":91956, "idQuestion":2820, "idParticipant":5904, "choix":[  ]},{"id":91957, "idQuestion":2828, "idParticipant":5904, "choix":null},{"id":91958, "idQuestion":2815, "idParticipant":5904, "choix":null},{"id":91959, "idQuestion":2812, "idParticipant":5904, "choix":[  ]},{"id":91960, "idQuestion":2818, "idParticipant":5904, "choix":[  ]},{"id":91961, "idQuestion":2830, "idParticipant":5904, "choix":null},{"id":91962, "idQuestion":2811, "idParticipant":5904, "choix":null}], "solutions":[], "qcm":{"id":149, "titre":" Le tourisme et ses espaces 4A", "introduction":"PHA+Qm9uam91ciw8L3A+PHA+Q2UgUUNNIGEgcG91ciBvYmplY3RpZiBkJ8OpdmFsdWVyIHZvcyBjb25uYWlzc2FuY2VzIGV0IHZvdHJlIGxvZ2lxdWUuPC9wPg==", "conclusion":"PHA+TGUgUUNNIGVzdCBmaW5pLjwvcD4=", "baremeBR":1, "baremeAR":0, "baremeMR":0, "idAuteur":8, "qAleatoire":true, "bloquerRejeuFormatif":true, "masquerCorrectifFormatif":true}, "association":{"id":237, "disponible":true}, "participant":{"idParticipant":5904, "peutVoirSolutions":false}}}
+
+--------------------------------------------------
+
+=== [XHR] POST https://api.ecoledirecte.com/v3/eleves/2852/qcms/149/associations/237/participants/5904.awp?verbe=patch&v=4.100.0 ===
+TIME: 17:00:28
+-- REQUEST --
+Headers: {
+  "Content-Type": "application/x-www-form-urlencoded",
+  "X-Token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d",
+  "2FA-Token": "3f6c286c-6006-4ffb-85fc-c8e7808e1b86",
+  "Accept": "application/json, text/plain, */*"
+}
+Cookies: TEDGEPT={"Site":"www.ecoledirecte.com","uri":"/login","User-Agent":"Mozilla/5.0 (Macintosh
+Body: data={
+    "action": "updateStartDate"
+}
+-- RESPONSE --
+Status: 200
+Headers: {
+  "cache-control": "no-cache",
+  "content-length": "119",
+  "content-type": "application/json",
+  "expires": "Thu, 01 Dec 1998 16:00:00 GMT",
+  "pragma": "no-cache",
+  "x-code": "200",
+  "x-token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d"
+}
+Data: {"code":200, "token":"d04ce64f-6afa-4cff-9fa7-6ce737e5f98d", "host":"HTTP222", "data":{"debute":"2026-05-26 16:55:26"}}
+
+--------------------------------------------------
+
+=== [XHR] POST https://api.ecoledirecte.com/v3/eleves/2852/qcms/149/associations/237/participants/5904/reponse/91943.awp?verbe=patch&v=4.100.0 ===
+TIME: 17:00:28
+-- REQUEST --
+Headers: {
+  "Content-Type": "application/x-www-form-urlencoded",
+  "X-Token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d",
+  "2FA-Token": "3f6c286c-6006-4ffb-85fc-c8e7808e1b86",
+  "Accept": "application/json, text/plain, */*"
+}
+Cookies: TEDGEPT={"Site":"www.ecoledirecte.com","uri":"/login","User-Agent":"Mozilla/5.0 (Macintosh
+Body: data={
+    "reponse": {
+        "id": 91943,
+        "idQuestion": 2819,
+        "idParticipant": 5904,
+        "choix": [
+            12922,
+            12923
+        ]
+    }
+}
+-- RESPONSE --
+Status: 200
+Headers: {
+  "cache-control": "no-cache",
+  "content-length": "147",
+  "content-type": "application/json",
+  "expires": "Thu, 01 Dec 1998 16:00:00 GMT",
+  "pragma": "no-cache",
+  "x-code": "200",
+  "x-token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d"
+}
+Data: {"code":200, "token":"d04ce64f-6afa-4cff-9fa7-6ce737e5f98d", "host":"HTTP186", "data":{"repondu":"2026-05-26 16:55:49", "resultat":"", "points":0}}
+
+--------------------------------------------------
+
+=== [XHR] POST https://api.ecoledirecte.com/v3/eleves/2852/qcms/149/associations/237/participants/5904/reponse/91944.awp?verbe=patch&v=4.100.0 ===
+TIME: 17:00:28
+-- REQUEST --
+Headers: {
+  "Content-Type": "application/x-www-form-urlencoded",
+  "X-Token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d",
+  "2FA-Token": "3f6c286c-6006-4ffb-85fc-c8e7808e1b86",
+  "Accept": "application/json, text/plain, */*"
+}
+Cookies: TEDGEPT={"Site":"www.ecoledirecte.com","uri":"/login","User-Agent":"Mozilla/5.0 (Macintosh
+Body: data={
+    "reponse": {
+        "id": 91944,
+        "idQuestion": 2814,
+        "idParticipant": 5904,
+        "choix": 12905
+    }
+}
+-- RESPONSE --
+Status: 200
+Headers: {
+  "cache-control": "no-cache",
+  "content-length": "147",
+  "content-type": "application/json",
+  "expires": "Thu, 01 Dec 1998 16:00:00 GMT",
+  "pragma": "no-cache",
+  "x-code": "200",
+  "x-token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d"
+}
+Data: {"code":200, "token":"d04ce64f-6afa-4cff-9fa7-6ce737e5f98d", "host":"HTTP288", "data":{"repondu":"2026-05-26 16:56:13", "resultat":"", "points":0}}
+
+--------------------------------------------------
+
+=== [XHR] POST https://api.ecoledirecte.com/v3/eleves/2852/qcms/149/associations/237/participants/5904/reponse/91945.awp?verbe=patch&v=4.100.0 ===
+TIME: 17:00:28
+-- REQUEST --
+Headers: {
+  "Content-Type": "application/x-www-form-urlencoded",
+  "X-Token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d",
+  "2FA-Token": "3f6c286c-6006-4ffb-85fc-c8e7808e1b86",
+  "Accept": "application/json, text/plain, */*"
+}
+Cookies: TEDGEPT={"Site":"www.ecoledirecte.com","uri":"/login","User-Agent":"Mozilla/5.0 (Macintosh
+Body: data={
+    "reponse": {
+        "id": 91945,
+        "idQuestion": 2825,
+        "idParticipant": 5904,
+        "choix": 12949
+    }
+}
+-- RESPONSE --
+Status: 200
+Headers: {
+  "cache-control": "no-cache",
+  "content-length": "147",
+  "content-type": "application/json",
+  "expires": "Thu, 01 Dec 1998 16:00:00 GMT",
+  "pragma": "no-cache",
+  "x-code": "200",
+  "x-token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d"
+}
+Data: {"code":200, "token":"d04ce64f-6afa-4cff-9fa7-6ce737e5f98d", "host":"HTTP210", "data":{"repondu":"2026-05-26 16:56:38", "resultat":"", "points":0}}
+
+--------------------------------------------------
+
+=== [XHR] POST https://api.ecoledirecte.com/v3/eleves/2852/qcms/149/associations/237/participants/5904/reponse/91946.awp?verbe=patch&v=4.100.0 ===
+TIME: 17:00:28
+-- REQUEST --
+Headers: {
+  "Content-Type": "application/x-www-form-urlencoded",
+  "X-Token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d",
+  "2FA-Token": "3f6c286c-6006-4ffb-85fc-c8e7808e1b86",
+  "Accept": "application/json, text/plain, */*"
+}
+Cookies: TEDGEPT={"Site":"www.ecoledirecte.com","uri":"/login","User-Agent":"Mozilla/5.0 (Macintosh
+Body: data={
+    "reponse": {
+        "id": 91946,
+        "idQuestion": 2817,
+        "idParticipant": 5904,
+        "choix": [
+            12914,
+            12915,
+            12916
+        ]
+    }
+}
+-- RESPONSE --
+Status: 200
+Headers: {
+  "cache-control": "no-cache",
+  "content-length": "147",
+  "content-type": "application/json",
+  "expires": "Thu, 01 Dec 1998 16:00:00 GMT",
+  "pragma": "no-cache",
+  "x-code": "200",
+  "x-token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d"
+}
+Data: {"code":200, "token":"d04ce64f-6afa-4cff-9fa7-6ce737e5f98d", "host":"HTTP186", "data":{"repondu":"2026-05-26 16:57:04", "resultat":"", "points":0}}
+
+--------------------------------------------------
+
+=== [XHR] POST https://api.ecoledirecte.com/v3/eleves/2852/qcms/149/associations/237/participants/5904/reponse/91947.awp?verbe=patch&v=4.100.0 ===
+TIME: 17:00:28
+-- REQUEST --
+Headers: {
+  "Content-Type": "application/x-www-form-urlencoded",
+  "X-Token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d",
+  "2FA-Token": "3f6c286c-6006-4ffb-85fc-c8e7808e1b86",
+  "Accept": "application/json, text/plain, */*"
+}
+Cookies: TEDGEPT={"Site":"www.ecoledirecte.com","uri":"/login","User-Agent":"Mozilla/5.0 (Macintosh
+Body: data={
+    "reponse": {
+        "id": 91947,
+        "idQuestion": 2827,
+        "idParticipant": 5904,
+        "choix": 12954
+    }
+}
+-- RESPONSE --
+Status: 200
+Headers: {
+  "cache-control": "no-cache",
+  "content-length": "147",
+  "content-type": "application/json",
+  "expires": "Thu, 01 Dec 1998 16:00:00 GMT",
+  "pragma": "no-cache",
+  "x-code": "200",
+  "x-token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d"
+}
+Data: {"code":200, "token":"d04ce64f-6afa-4cff-9fa7-6ce737e5f98d", "host":"HTTP126", "data":{"repondu":"2026-05-26 16:57:15", "resultat":"", "points":0}}
+
+--------------------------------------------------
+
+=== [XHR] POST https://api.ecoledirecte.com/v3/eleves/2852/qcms/149/associations/237/participants/5904/reponse/91948.awp?verbe=patch&v=4.100.0 ===
+TIME: 17:00:28
+-- REQUEST --
+Headers: {
+  "Content-Type": "application/x-www-form-urlencoded",
+  "X-Token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d",
+  "2FA-Token": "3f6c286c-6006-4ffb-85fc-c8e7808e1b86",
+  "Accept": "application/json, text/plain, */*"
+}
+Cookies: TEDGEPT={"Site":"www.ecoledirecte.com","uri":"/login","User-Agent":"Mozilla/5.0 (Macintosh
+Body: data={
+    "reponse": {
+        "id": 91948,
+        "idQuestion": 2829,
+        "idParticipant": 5904,
+        "choix": 12964
+    }
+}
+-- RESPONSE --
+Status: 200
+Headers: {
+  "cache-control": "no-cache",
+  "content-length": "147",
+  "content-type": "application/json",
+  "expires": "Thu, 01 Dec 1998 16:00:00 GMT",
+  "pragma": "no-cache",
+  "x-code": "200",
+  "x-token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d"
+}
+Data: {"code":200, "token":"d04ce64f-6afa-4cff-9fa7-6ce737e5f98d", "host":"HTTP132", "data":{"repondu":"2026-05-26 16:57:31", "resultat":"", "points":0}}
+
+--------------------------------------------------
+
+=== [XHR] POST https://api.ecoledirecte.com/v3/eleves/2852/qcms/149/associations/237/participants/5904/reponse/91949.awp?verbe=patch&v=4.100.0 ===
+TIME: 17:00:28
+-- REQUEST --
+Headers: {
+  "Content-Type": "application/x-www-form-urlencoded",
+  "X-Token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d",
+  "2FA-Token": "3f6c286c-6006-4ffb-85fc-c8e7808e1b86",
+  "Accept": "application/json, text/plain, */*"
+}
+Cookies: TEDGEPT={"Site":"www.ecoledirecte.com","uri":"/login","User-Agent":"Mozilla/5.0 (Macintosh
+Body: data={
+    "reponse": {
+        "id": 91949,
+        "idQuestion": 2821,
+        "idParticipant": 5904,
+        "choix": 12930
+    }
+}
+-- RESPONSE --
+Status: 200
+Headers: {
+  "cache-control": "no-cache",
+  "content-length": "147",
+  "content-type": "application/json",
+  "expires": "Thu, 01 Dec 1998 16:00:00 GMT",
+  "pragma": "no-cache",
+  "x-code": "200",
+  "x-token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d"
+}
+Data: {"code":200, "token":"d04ce64f-6afa-4cff-9fa7-6ce737e5f98d", "host":"HTTP162", "data":{"repondu":"2026-05-26 16:57:34", "resultat":"", "points":0}}
+
+--------------------------------------------------
+
+=== [XHR] POST https://api.ecoledirecte.com/v3/eleves/2852/qcms/149/associations/237/participants/5904/reponse/91950.awp?verbe=patch&v=4.100.0 ===
+TIME: 17:00:28
+-- REQUEST --
+Headers: {
+  "Content-Type": "application/x-www-form-urlencoded",
+  "X-Token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d",
+  "2FA-Token": "3f6c286c-6006-4ffb-85fc-c8e7808e1b86",
+  "Accept": "application/json, text/plain, */*"
+}
+Cookies: TEDGEPT={"Site":"www.ecoledirecte.com","uri":"/login","User-Agent":"Mozilla/5.0 (Macintosh
+Body: data={
+    "reponse": {
+        "id": 91950,
+        "idQuestion": 2824,
+        "idParticipant": 5904,
+        "choix": 12943
+    }
+}
+-- RESPONSE --
+Status: 200
+Headers: {
+  "cache-control": "no-cache",
+  "content-length": "147",
+  "content-type": "application/json",
+  "expires": "Thu, 01 Dec 1998 16:00:00 GMT",
+  "pragma": "no-cache",
+  "x-code": "200",
+  "x-token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d"
+}
+Data: {"code":200, "token":"d04ce64f-6afa-4cff-9fa7-6ce737e5f98d", "host":"HTTP312", "data":{"repondu":"2026-05-26 16:57:40", "resultat":"", "points":0}}
+
+--------------------------------------------------
+
+=== [XHR] POST https://api.ecoledirecte.com/v3/eleves/2852/qcms/149/associations/237/participants/5904/reponse/91951.awp?verbe=patch&v=4.100.0 ===
+TIME: 17:00:28
+-- REQUEST --
+Headers: {
+  "Content-Type": "application/x-www-form-urlencoded",
+  "X-Token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d",
+  "2FA-Token": "3f6c286c-6006-4ffb-85fc-c8e7808e1b86",
+  "Accept": "application/json, text/plain, */*"
+}
+Cookies: TEDGEPT={"Site":"www.ecoledirecte.com","uri":"/login","User-Agent":"Mozilla/5.0 (Macintosh
+Body: data={
+    "reponse": {
+        "id": 91951,
+        "idQuestion": 2823,
+        "idParticipant": 5904,
+        "choix": 12941
+    }
+}
+-- RESPONSE --
+Status: 200
+Headers: {
+  "cache-control": "no-cache",
+  "content-length": "147",
+  "content-type": "application/json",
+  "expires": "Thu, 01 Dec 1998 16:00:00 GMT",
+  "pragma": "no-cache",
+  "x-code": "200",
+  "x-token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d"
+}
+Data: {"code":200, "token":"d04ce64f-6afa-4cff-9fa7-6ce737e5f98d", "host":"HTTP150", "data":{"repondu":"2026-05-26 16:57:45", "resultat":"", "points":0}}
+
+--------------------------------------------------
+
+=== [XHR] POST https://api.ecoledirecte.com/v3/eleves/2852/qcms/149/associations/237/participants/5904/reponse/91952.awp?verbe=patch&v=4.100.0 ===
+TIME: 17:00:28
+-- REQUEST --
+Headers: {
+  "Content-Type": "application/x-www-form-urlencoded",
+  "X-Token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d",
+  "2FA-Token": "3f6c286c-6006-4ffb-85fc-c8e7808e1b86",
+  "Accept": "application/json, text/plain, */*"
+}
+Cookies: TEDGEPT={"Site":"www.ecoledirecte.com","uri":"/login","User-Agent":"Mozilla/5.0 (Macintosh
+Body: data={
+    "reponse": {
+        "id": 91952,
+        "idQuestion": 2816,
+        "idParticipant": 5904,
+        "choix": 12912
+    }
+}
+-- RESPONSE --
+Status: 200
+Headers: {
+  "cache-control": "no-cache",
+  "content-length": "147",
+  "content-type": "application/json",
+  "expires": "Thu, 01 Dec 1998 16:00:00 GMT",
+  "pragma": "no-cache",
+  "x-code": "200",
+  "x-token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d"
+}
+Data: {"code":200, "token":"d04ce64f-6afa-4cff-9fa7-6ce737e5f98d", "host":"HTTP324", "data":{"repondu":"2026-05-26 16:57:56", "resultat":"", "points":0}}
+
+--------------------------------------------------
+
+=== [XHR] POST https://api.ecoledirecte.com/v3/eleves/2852/qcms/149/associations/237/participants/5904/reponse/91953.awp?verbe=patch&v=4.100.0 ===
+TIME: 17:00:28
+-- REQUEST --
+Headers: {
+  "Content-Type": "application/x-www-form-urlencoded",
+  "X-Token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d",
+  "2FA-Token": "3f6c286c-6006-4ffb-85fc-c8e7808e1b86",
+  "Accept": "application/json, text/plain, */*"
+}
+Cookies: TEDGEPT={"Site":"www.ecoledirecte.com","uri":"/login","User-Agent":"Mozilla/5.0 (Macintosh
+Body: data={
+    "reponse": {
+        "id": 91953,
+        "idQuestion": 2826,
+        "idParticipant": 5904,
+        "choix": [
+            12950,
+            12953
+        ]
+    }
+}
+-- RESPONSE --
+Status: 200
+Headers: {
+  "cache-control": "no-cache",
+  "content-length": "147",
+  "content-type": "application/json",
+  "expires": "Thu, 01 Dec 1998 16:00:00 GMT",
+  "pragma": "no-cache",
+  "x-code": "200",
+  "x-token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d"
+}
+Data: {"code":200, "token":"d04ce64f-6afa-4cff-9fa7-6ce737e5f98d", "host":"HTTP252", "data":{"repondu":"2026-05-26 16:58:19", "resultat":"", "points":0}}
+
+--------------------------------------------------
+
+=== [XHR] POST https://api.ecoledirecte.com/v3/eleves/2852/qcms/149/associations/237/participants/5904/reponse/91954.awp?verbe=patch&v=4.100.0 ===
+TIME: 17:00:28
+-- REQUEST --
+Headers: {
+  "Content-Type": "application/x-www-form-urlencoded",
+  "X-Token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d",
+  "2FA-Token": "3f6c286c-6006-4ffb-85fc-c8e7808e1b86",
+  "Accept": "application/json, text/plain, */*"
+}
+Cookies: TEDGEPT={"Site":"www.ecoledirecte.com","uri":"/login","User-Agent":"Mozilla/5.0 (Macintosh
+Body: data={
+    "reponse": {
+        "id": 91954,
+        "idQuestion": 2813,
+        "idParticipant": 5904,
+        "choix": 12899
+    }
+}
+-- RESPONSE --
+Status: 200
+Headers: {
+  "cache-control": "no-cache",
+  "content-length": "147",
+  "content-type": "application/json",
+  "expires": "Thu, 01 Dec 1998 16:00:00 GMT",
+  "pragma": "no-cache",
+  "x-code": "200",
+  "x-token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d"
+}
+Data: {"code":200, "token":"d04ce64f-6afa-4cff-9fa7-6ce737e5f98d", "host":"HTTP294", "data":{"repondu":"2026-05-26 16:58:46", "resultat":"", "points":0}}
+
+--------------------------------------------------
+
+=== [XHR] POST https://api.ecoledirecte.com/v3/eleves/2852/qcms/149/associations/237/participants/5904/reponse/91955.awp?verbe=patch&v=4.100.0 ===
+TIME: 17:00:28
+-- REQUEST --
+Headers: {
+  "Content-Type": "application/x-www-form-urlencoded",
+  "X-Token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d",
+  "2FA-Token": "3f6c286c-6006-4ffb-85fc-c8e7808e1b86",
+  "Accept": "application/json, text/plain, */*"
+}
+Cookies: TEDGEPT={"Site":"www.ecoledirecte.com","uri":"/login","User-Agent":"Mozilla/5.0 (Macintosh
+Body: data={
+    "reponse": {
+        "id": 91955,
+        "idQuestion": 2822,
+        "idParticipant": 5904,
+        "choix": 12935
+    }
+}
+-- RESPONSE --
+Status: 200
+Headers: {
+  "cache-control": "no-cache",
+  "content-length": "147",
+  "content-type": "application/json",
+  "expires": "Thu, 01 Dec 1998 16:00:00 GMT",
+  "pragma": "no-cache",
+  "x-code": "200",
+  "x-token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d"
+}
+Data: {"code":200, "token":"d04ce64f-6afa-4cff-9fa7-6ce737e5f98d", "host":"HTTP252", "data":{"repondu":"2026-05-26 16:59:02", "resultat":"", "points":0}}
+
+--------------------------------------------------
+
+=== [XHR] POST https://api.ecoledirecte.com/v3/eleves/2852/qcms/149/associations/237/participants/5904/reponse/91956.awp?verbe=patch&v=4.100.0 ===
+TIME: 17:00:28
+-- REQUEST --
+Headers: {
+  "Content-Type": "application/x-www-form-urlencoded",
+  "X-Token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d",
+  "2FA-Token": "3f6c286c-6006-4ffb-85fc-c8e7808e1b86",
+  "Accept": "application/json, text/plain, */*"
+}
+Cookies: TEDGEPT={"Site":"www.ecoledirecte.com","uri":"/login","User-Agent":"Mozilla/5.0 (Macintosh
+Body: data={
+    "reponse": {
+        "id": 91956,
+        "idQuestion": 2820,
+        "idParticipant": 5904,
+        "choix": [
+            12927,
+            12928,
+            12929
+        ]
+    }
+}
+-- RESPONSE --
+Status: 200
+Headers: {
+  "cache-control": "no-cache",
+  "content-length": "147",
+  "content-type": "application/json",
+  "expires": "Thu, 01 Dec 1998 16:00:00 GMT",
+  "pragma": "no-cache",
+  "x-code": "200",
+  "x-token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d"
+}
+Data: {"code":200, "token":"d04ce64f-6afa-4cff-9fa7-6ce737e5f98d", "host":"HTTP204", "data":{"repondu":"2026-05-26 16:59:14", "resultat":"", "points":0}}
+
+--------------------------------------------------
+
+=== [XHR] POST https://api.ecoledirecte.com/v3/eleves/2852/qcms/149/associations/237/participants/5904/reponse/91957.awp?verbe=patch&v=4.100.0 ===
+TIME: 17:00:28
+-- REQUEST --
+Headers: {
+  "Content-Type": "application/x-www-form-urlencoded",
+  "X-Token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d",
+  "2FA-Token": "3f6c286c-6006-4ffb-85fc-c8e7808e1b86",
+  "Accept": "application/json, text/plain, */*"
+}
+Cookies: TEDGEPT={"Site":"www.ecoledirecte.com","uri":"/login","User-Agent":"Mozilla/5.0 (Macintosh
+Body: data={
+    "reponse": {
+        "id": 91957,
+        "idQuestion": 2828,
+        "idParticipant": 5904,
+        "choix": 12961
+    }
+}
+-- RESPONSE --
+Status: 200
+Headers: {
+  "cache-control": "no-cache",
+  "content-length": "147",
+  "content-type": "application/json",
+  "expires": "Thu, 01 Dec 1998 16:00:00 GMT",
+  "pragma": "no-cache",
+  "x-code": "200",
+  "x-token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d"
+}
+Data: {"code":200, "token":"d04ce64f-6afa-4cff-9fa7-6ce737e5f98d", "host":"HTTP150", "data":{"repondu":"2026-05-26 16:59:19", "resultat":"", "points":0}}
+
+--------------------------------------------------
+
+=== [XHR] POST https://api.ecoledirecte.com/v3/eleves/2852/qcms/149/associations/237/participants/5904/reponse/91958.awp?verbe=patch&v=4.100.0 ===
+TIME: 17:00:28
+-- REQUEST --
+Headers: {
+  "Content-Type": "application/x-www-form-urlencoded",
+  "X-Token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d",
+  "2FA-Token": "3f6c286c-6006-4ffb-85fc-c8e7808e1b86",
+  "Accept": "application/json, text/plain, */*"
+}
+Cookies: TEDGEPT={"Site":"www.ecoledirecte.com","uri":"/login","User-Agent":"Mozilla/5.0 (Macintosh
+Body: data={
+    "reponse": {
+        "id": 91958,
+        "idQuestion": 2815,
+        "idParticipant": 5904,
+        "choix": 12906
+    }
+}
+-- RESPONSE --
+Status: 200
+Headers: {
+  "cache-control": "no-cache",
+  "content-length": "147",
+  "content-type": "application/json",
+  "expires": "Thu, 01 Dec 1998 16:00:00 GMT",
+  "pragma": "no-cache",
+  "x-code": "200",
+  "x-token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d"
+}
+Data: {"code":200, "token":"d04ce64f-6afa-4cff-9fa7-6ce737e5f98d", "host":"HTTP246", "data":{"repondu":"2026-05-26 16:59:25", "resultat":"", "points":0}}
+
+--------------------------------------------------
+
+=== [XHR] POST https://api.ecoledirecte.com/v3/eleves/2852/qcms/149/associations/237/participants/5904/reponse/91959.awp?verbe=patch&v=4.100.0 ===
+TIME: 17:00:28
+-- REQUEST --
+Headers: {
+  "Content-Type": "application/x-www-form-urlencoded",
+  "X-Token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d",
+  "2FA-Token": "3f6c286c-6006-4ffb-85fc-c8e7808e1b86",
+  "Accept": "application/json, text/plain, */*"
+}
+Cookies: TEDGEPT={"Site":"www.ecoledirecte.com","uri":"/login","User-Agent":"Mozilla/5.0 (Macintosh
+Body: data={
+    "reponse": {
+        "id": 91959,
+        "idQuestion": 2812,
+        "idParticipant": 5904,
+        "choix": [
+            12895,
+            12896
+        ]
+    }
+}
+-- RESPONSE --
+Status: 200
+Headers: {
+  "cache-control": "no-cache",
+  "content-length": "147",
+  "content-type": "application/json",
+  "expires": "Thu, 01 Dec 1998 16:00:00 GMT",
+  "pragma": "no-cache",
+  "x-code": "200",
+  "x-token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d"
+}
+Data: {"code":200, "token":"d04ce64f-6afa-4cff-9fa7-6ce737e5f98d", "host":"HTTP276", "data":{"repondu":"2026-05-26 16:59:30", "resultat":"", "points":0}}
+
+--------------------------------------------------
+
+=== [XHR] POST https://api.ecoledirecte.com/v3/eleves/2852/qcms/149/associations/237/participants/5904/reponse/91960.awp?verbe=patch&v=4.100.0 ===
+TIME: 17:00:28
+-- REQUEST --
+Headers: {
+  "Content-Type": "application/x-www-form-urlencoded",
+  "X-Token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d",
+  "2FA-Token": "3f6c286c-6006-4ffb-85fc-c8e7808e1b86",
+  "Accept": "application/json, text/plain, */*"
+}
+Cookies: TEDGEPT={"Site":"www.ecoledirecte.com","uri":"/login","User-Agent":"Mozilla/5.0 (Macintosh
+Body: data={
+    "reponse": {
+        "id": 91960,
+        "idQuestion": 2818,
+        "idParticipant": 5904,
+        "choix": [
+            12918,
+            12920
+        ]
+    }
+}
+-- RESPONSE --
+Status: 200
+Headers: {
+  "cache-control": "no-cache",
+  "content-length": "147",
+  "content-type": "application/json",
+  "expires": "Thu, 01 Dec 1998 16:00:00 GMT",
+  "pragma": "no-cache",
+  "x-code": "200",
+  "x-token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d"
+}
+Data: {"code":200, "token":"d04ce64f-6afa-4cff-9fa7-6ce737e5f98d", "host":"HTTP156", "data":{"repondu":"2026-05-26 16:59:43", "resultat":"", "points":0}}
+
+--------------------------------------------------
+
+=== [XHR] POST https://api.ecoledirecte.com/v3/eleves/2852/qcms/149/associations/237/participants/5904/reponse/91961.awp?verbe=patch&v=4.100.0 ===
+TIME: 17:00:28
+-- REQUEST --
+Headers: {
+  "Content-Type": "application/x-www-form-urlencoded",
+  "X-Token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d",
+  "2FA-Token": "3f6c286c-6006-4ffb-85fc-c8e7808e1b86",
+  "Accept": "application/json, text/plain, */*"
+}
+Cookies: TEDGEPT={"Site":"www.ecoledirecte.com","uri":"/login","User-Agent":"Mozilla/5.0 (Macintosh
+Body: data={
+    "reponse": {
+        "id": 91961,
+        "idQuestion": 2830,
+        "idParticipant": 5904,
+        "choix": 12968
+    }
+}
+-- RESPONSE --
+Status: 200
+Headers: {
+  "cache-control": "no-cache",
+  "content-length": "147",
+  "content-type": "application/json",
+  "expires": "Thu, 01 Dec 1998 16:00:00 GMT",
+  "pragma": "no-cache",
+  "x-code": "200",
+  "x-token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d"
+}
+Data: {"code":200, "token":"d04ce64f-6afa-4cff-9fa7-6ce737e5f98d", "host":"HTTP198", "data":{"repondu":"2026-05-26 16:59:57", "resultat":"", "points":0}}
+
+--------------------------------------------------
+
+=== [XHR] POST https://api.ecoledirecte.com/v3/eleves/2852/qcms/149/associations/237/participants/5904/reponse/91962.awp?verbe=patch&v=4.100.0 ===
+TIME: 17:00:28
+-- REQUEST --
+Headers: {
+  "Content-Type": "application/x-www-form-urlencoded",
+  "X-Token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d",
+  "2FA-Token": "3f6c286c-6006-4ffb-85fc-c8e7808e1b86",
+  "Accept": "application/json, text/plain, */*"
+}
+Cookies: TEDGEPT={"Site":"www.ecoledirecte.com","uri":"/login","User-Agent":"Mozilla/5.0 (Macintosh
+Body: data={
+    "reponse": {
+        "id": 91962,
+        "idQuestion": 2811,
+        "idParticipant": 5904,
+        "choix": 12892
+    }
+}
+-- RESPONSE --
+Status: 200
+Headers: {
+  "cache-control": "no-cache",
+  "content-length": "147",
+  "content-type": "application/json",
+  "expires": "Thu, 01 Dec 1998 16:00:00 GMT",
+  "pragma": "no-cache",
+  "x-code": "200",
+  "x-token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d"
+}
+Data: {"code":200, "token":"d04ce64f-6afa-4cff-9fa7-6ce737e5f98d", "host":"HTTP324", "data":{"repondu":"2026-05-26 17:00:02", "resultat":"", "points":0}}
+
+--------------------------------------------------
+
+=== [XHR] POST https://api.ecoledirecte.com/v3/eleves/2852/qcms/149/associations/237/participants/5904.awp?verbe=patch&v=4.100.0 ===
+TIME: 17:00:28
+-- REQUEST --
+Headers: {
+  "Content-Type": "application/x-www-form-urlencoded",
+  "X-Token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d",
+  "2FA-Token": "3f6c286c-6006-4ffb-85fc-c8e7808e1b86",
+  "Accept": "application/json, text/plain, */*"
+}
+Cookies: TEDGEPT={"Site":"www.ecoledirecte.com","uri":"/login","User-Agent":"Mozilla/5.0 (Macintosh
+Body: data={
+    "action": "updateEndDate"
+}
+-- RESPONSE --
+Status: 200
+Headers: {
+  "cache-control": "no-cache",
+  "content-length": "117",
+  "content-type": "application/json",
+  "expires": "Thu, 01 Dec 1998 16:00:00 GMT",
+  "pragma": "no-cache",
+  "x-code": "200",
+  "x-token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d"
+}
+Data: {"code":200, "token":"d04ce64f-6afa-4cff-9fa7-6ce737e5f98d", "host":"HTTP126", "data":{"fini":"2026-05-26 17:00:02"}}
+
+--------------------------------------------------
+
+=== [XHR] POST https://api.ecoledirecte.com/v3/eleves/2852/qcms/0/associations.awp?verbe=get&v=4.100.0 ===
+TIME: 17:00:28
+-- REQUEST --
+Headers: {
+  "Content-Type": "application/x-www-form-urlencoded",
+  "X-Token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d",
+  "2FA-Token": "3f6c286c-6006-4ffb-85fc-c8e7808e1b86",
+  "Accept": "application/json, text/plain, */*"
+}
+Cookies: TEDGEPT={"Site":"www.ecoledirecte.com","uri":"/login","User-Agent":"Mozilla/5.0 (Macintosh
+Body: data={}
+-- RESPONSE --
+Status: 200
+Headers: {
+  "cache-control": "no-cache",
+  "content-length": "89",
+  "content-type": "application/json",
+  "expires": "Thu, 01 Dec 1998 16:00:00 GMT",
+  "pragma": "no-cache",
+  "x-code": "200",
+  "x-token": "d04ce64f-6afa-4cff-9fa7-6ce737e5f98d"
+}
+Data: {"code":200, "token":"d04ce64f-6afa-4cff-9fa7-6ce737e5f98d", "host":"HTTP216", "data":[]}
+
+--------------------------------------------------
+
