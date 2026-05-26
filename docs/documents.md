@@ -7,7 +7,7 @@ sidebar_position: 11
 
 Documents de l'utilisateur. Pour télécharger, rendez-vous à Téléchargement.
 
-```json title="POST /elevesDocuments.awp?archive=&verbe=get&v=4.97.0"
+```json title="POST /elevesDocuments.awp?archive=&verbe=get&v=7.12.1"
 data={} //Objet vide obligatoire
 ```
 ```json title="Réponse"

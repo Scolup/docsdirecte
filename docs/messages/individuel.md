@@ -8,7 +8,7 @@ sidebar_position: 2
 
 Contenu d'un message individuel. La seule grande différence d'information avec la liste des messages c'est qu'on peut voir le contenu, je ne détaillerai donc pas les différents objets ici.
 
-```json title="POST /eleves/{identifiant}/messages/{id du message}.awp?verbe=get&mode=destinataire&v=4.97.0"
+```json title="POST /eleves/{identifiant}/messages/{id du message}.awp?verbe=get&mode=destinataire&v=7.12.1"
 data={
     "anneeMessages": "2025-2026"
 }

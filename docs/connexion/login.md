@@ -11,7 +11,7 @@ Cette étape est cruciale pour obtenir votre premier token d'accès. Elle permet
 
 Pour vous connecter, envoyez une requête POST à l'endpoint suivant :
 
-```json title="POST /login.awp?v=4.97.0"
+```json title="POST /login.awp?v=7.12.1"
 data={
   "identifiant": "VOTRE_IDENTIFIANT",
   "motdepasse": "VOTRE_MOT_DE_PASSE",

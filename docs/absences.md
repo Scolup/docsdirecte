@@ -7,7 +7,7 @@ sidebar_position: 9
 
 Liste des absences et retards de l'élève.
 
-```json title="POST /eleves/{identifiant}/viescolaire.awp?verbe=get&v=4.97.0"
+```json title="POST /eleves/{identifiant}/viescolaire.awp?verbe=get&v=7.12.1"
 data={} //Objet vide obligatoire
 ```
 

@@ -9,7 +9,7 @@ Comme à peu près tout le reste de l'API, le cloud est un bazar.
 
 ### Obtenir les fichiers
 
-```json title="POST /cloud/E/{identifiant}.awp?verbe=get&v=4.97.0"
+```json title="POST /cloud/E/{identifiant}.awp?verbe=get&v=7.12.1"
 data={
     "profondeur": 3 //Profondeur des dossiers
 }
@@ -95,7 +95,7 @@ data={
 
 ## Nouveau dossier
 
-```json title="POST /cloud/E/{identifiant}.awp?verbe=post&v=4.97.0"
+```json title="POST /cloud/E/{identifiant}.awp?verbe=post&v=7.12.1"
 data={
     "parentNode": {
         "id": "\\{id étab.}\\E\\{identifiant}", //Chemin où ajouter le dossier
@@ -133,7 +133,7 @@ data={
 
 ## Copier
 
-```json title="POST /cloud/E/{identifiant}.awp?verbe=copy&v=4.97.0"
+```json title="POST /cloud/E/{identifiant}.awp?verbe=copy&v=7.12.1"
 data={
     "parentNode": { //Le cloud de l'élève (et pas le dossier parent)
         "id": "\\{id étab.}\\E\\{identifiant}",
@@ -178,7 +178,7 @@ La réponse n'est pas documentée puisque c'est la même que pour l'obtention de
 
 ## Effacer
 
-```json title="POST /cloud/E/{identifiant}/visibility.awp?verbe=delete&v=4.97.0"
+```json title="POST /cloud/E/{identifiant}/visibility.awp?verbe=delete&v=7.12.1"
 data={
     "tabNodes": [ //Fichiers à retirer
         {
@@ -245,7 +245,7 @@ data={
 
 ## Restaurer
 
-```json title="POST /cloud/E/{identifiant}/visibility.awp?verbe=post&v=4.97.0"
+```json title="POST /cloud/E/{identifiant}/visibility.awp?verbe=post&v=7.12.1"
 data={
     "tabNodes": [
         {
@@ -329,7 +329,7 @@ Enregistrer des pièces jointes dans le dossier Pièces jointes du cloud
 
 ### Agenda
 
-```json title="POST /exportToCloud.awp?idFichier={id du fichier}&typeModule=CAHIER_DE_TEXTES&isArchive=false&isEternel=false&idVisiteStage=&verbe=post&v=4.97.0"
+```json title="POST /exportToCloud.awp?idFichier={id du fichier}&typeModule=CAHIER_DE_TEXTES&isArchive=false&isEternel=false&idVisiteStage=&verbe=post&v=7.12.1"
 data={}
 ```
 
@@ -355,7 +355,7 @@ data={}
 
 ### Messages
 
-```json title="POST /exportToCloud.awp?idFichier=9349&typeModule=MESSAGERIE&isArchive=false&isEternel=false&idVisiteStage=&verbe=post&v=4.97.0"
+```json title="POST /exportToCloud.awp?idFichier=9349&typeModule=MESSAGERIE&isArchive=false&isEternel=false&idVisiteStage=&verbe=post&v=7.12.1"
 data={}
 ```
 
