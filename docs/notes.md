@@ -8,7 +8,7 @@ sidebar_position: 5
 Mais **QUEL ENFER**
 Récupération des notes, périodes, matières, paramétrages notes, compétences et LSUN.
 
-```json title="POST /eleves/{identifiant}/notes.awp?verbe=get&v=4.97.0"
+```json title="POST /eleves/{identifiant}/notes.awp?verbe=get&v=7.12.1"
 data={
     "anneeScolaire": "" //Laisser vide pour l'année en cours
 }

@@ -9,7 +9,7 @@ Technique utilisée par l'application EcoleDirecte pour maintenir la session san
 
 Pour utiliser cette technique, vous devrez changer le body du premier login :
 
-```json title="POST /login.awp?v=4.97.0"
+```json title="POST /login.awp?v=7.12.1"
 data={
   "identifiant": "",
   "motdepasse": "",
@@ -24,7 +24,7 @@ data={
 
 Quand le token expire, envoyez :
 
-```json title="POST /login.awp?v=4.97.0"
+```json title="POST /login.awp?v=7.12.1"
 data={
   "identifiant": "", //Votre identifiant EcoleDirecte
   "uuid": "", //L'UUID envoyé au premier login

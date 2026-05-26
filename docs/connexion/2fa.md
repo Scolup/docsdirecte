@@ -9,7 +9,7 @@ Si vous recevez le code `250`, mettez le `token` temporaire fourni dans le heade
 
 ### Étape A : Récupérer la question
 
-```json title="POST /v3/connexion/doubleauth.awp?verbe=get&v=4.97.0"
+```json title="POST /v3/connexion/doubleauth.awp?verbe=get&v=7.12.1"
 data={} //Objet vide obligatoire
 ```
 
@@ -17,7 +17,7 @@ L'API renvoie la question et les propositions encodées en **Base64**.
 
 ### Étape B : Répondre au QCM
 
-```json title="POST /v3/connexion/doubleauth.awp?verbe=post&v=4.97.0"
+```json title="POST /v3/connexion/doubleauth.awp?verbe=post&v=7.12.1"
     {
         "choix": "d3JhcERpcmVjdGU=" // Réponse encodée en Base64
     }
@@ -31,7 +31,7 @@ Si vous ne renvoyez pas la réponse en Base64, votre compte sera bloqué et vous
 
 Une fois le QCM réussi, l'API renvoie des objets `cn` et `cv`. Vous devez refaire une requête de Login en incluant ces paramètres :
 
-```json title="POST /login.awp?v=4.97.0"
+```json title="POST /login.awp?v=7.12.1"
 data={
     "identifiant": "",
     "motdepasse": "",

@@ -8,7 +8,7 @@ sidebar_position: 2
 
 Timeline que tous les élèves de l'établisement voient, y compris post-its.
 
-```json title="POST /E/{identifiant}/timelineAccueilCommun.awp?verbe=get&v=4.97.0"
+```json title="POST /E/{identifiant}/timelineAccueilCommun.awp?verbe=get&v=7.12.1"
 {} //Objet vide obligatoire
 ```
 

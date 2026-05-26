@@ -297,7 +297,7 @@ L'objet `accounts` se trouve dans `{data}` mais `token` est directement dans la 
 
 ## Obtenir paramètres
 
-```json title="POST /logins/{idLogin}.awp?verbe=get&v=4.97.0"
+```json title="POST /logins/{idLogin}.awp?verbe=get&v=7.12.1"
 data={}
 ```
 
@@ -328,7 +328,7 @@ data={}
 
 `accessibiliteVisuelle` dans l'objet accounts.
 
-```json title="POST /parametreIndividuel.awp?verbe=put&v=4.97.0"
+```json title="POST /parametreIndividuel.awp?verbe=put&v=7.12.1"
 data={
     "path": "Préférences/Elèves/accessibiliteVisuelle/{identifiant}",
     "value": "1" //0 pour désactiver
@@ -337,7 +337,7 @@ data={
 
 ## Modifier paramètres
 
-```json title="POST /logins/{idLogin}.awp?verbe=put&v=4.97.0"
+```json title="POST /logins/{idLogin}.awp?verbe=put&v=7.12.1"
 data={
     "identifiant": "adouche-adouche-adouche", //Nouvel identifiant (ou actuel si inchangé)
     "nouveauMotDePasse": "MO2PAC", //Nouveau mdp (ou actuel si inchangé)

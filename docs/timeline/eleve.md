@@ -8,7 +8,7 @@ sidebar_position: 1
 
 La liste des derniers événements qu'on peut voir sur la page d'accueil (un peu inutile...)
 
-```json title="POST /eleves/{identifiant}/timeline.awp?verbe=get&v=4.97.0"
+```json title="POST /eleves/{identifiant}/timeline.awp?verbe=get&v=7.12.1"
 {} //Objet vide obligatoire
 ```
 

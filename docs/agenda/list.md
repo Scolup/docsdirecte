@@ -8,7 +8,7 @@ sidebar_position: 1
 
 Récupérer la liste des devoirs à venir :
 
-```json title="POST /Eleves/{identifiant}/cahierdetexte.awp?verbe=get&v=4.97.0"
+```json title="POST /Eleves/{identifiant}/cahierdetexte.awp?verbe=get&v=7.12.1"
 data={} //Objet vide obligatoire
 ```
 

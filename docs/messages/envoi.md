@@ -8,7 +8,7 @@ sidebar_position: 3
 
 Pour envoyer un message, il faut un destinataire ! Récupérez-les ainsi :
 
-```json title="POST /messagerie/contacts/{type de contact entre professeurs, personnels, entreprises}.awp?nom=&idClasse={id classe}&verbe=get&v=4.97.0"
+```json title="POST /messagerie/contacts/{type de contact entre professeurs, personnels, entreprises}.awp?nom=&idClasse={id classe}&verbe=get&v=7.12.1"
 data={} //Objet vide obligatoire
 ```
 ```json title="Réponse"
@@ -97,7 +97,7 @@ data={} //Objet vide obligatoire
 
 Ensuite, vous pouvez envoyer le message :
 
-```json title="POST /eleves/{identifiant}/messages.awp?verbe=post&v=4.97.0"
+```json title="POST /eleves/{identifiant}/messages.awp?verbe=post&v=7.12.1"
 data={
     "message": {
         "subject": "Message important", //Objet (pas en B64 !)

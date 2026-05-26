@@ -8,7 +8,7 @@ sidebar_position: 3
 
 C'est un à la fois !
 
-```json title="POST /Eleves/{identifiant}/cahierdetexte.awp?verbe=put&v=4.97.0"
+```json title="POST /Eleves/{identifiant}/cahierdetexte.awp?verbe=put&v=7.12.1"
 data={
     "idDevoirsEffectues": [
         11313 //ID du devoir effectué

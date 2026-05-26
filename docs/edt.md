@@ -7,7 +7,7 @@ sidebar_position: 7
 
 Contrairement aux notes c'est simple :
 
-```json title="/E/{identifiant}/emploidutemps.awp?verbe=get&v=4.97.0"
+```json title="/E/{identifiant}/emploidutemps.awp?verbe=get&v=7.12.1"
 data={
     "dateDebut": "2026-03-16", //De quelle date...
     "dateFin": "2026-03-22",   //...A quelle date récupérer l'EDT
@@ -51,7 +51,7 @@ N'abusez pas avec les dates sinon votre activité sera analysée par Aplim.
 
 Pour obtenir l'URL du fichier .ics :
 
-```json title="/ical/E/{identifiant}/url.awp?verbe=get&v=4.97.0"
+```json title="/ical/E/{identifiant}/url.awp?verbe=get&v=7.12.1"
 data={}
 ```
 
