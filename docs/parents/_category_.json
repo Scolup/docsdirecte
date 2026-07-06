@@ -1,0 +1,8 @@
+{
+  "label": "👨‍👩‍👧‍👦 Comptes parents",
+  "position": 4,
+    "link": {
+    "type": "generated-index",
+    "description": "API pour les comptes parents (typeCompte: \"F\")"
+  }
+}

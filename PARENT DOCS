@@ -1,0 +1,839 @@
+IMPORTANT NOTE : this doc normalizes requests responses as such :
+
+The project normalizes raw API responses into a consistent shape:
+
+```json
+{
+  ok: boolean;
+  code: number;
+  raw: RawApiResponse;        // original response for debugging
+  data?: Payload;             // typed payload on success
+  message?: string;           // error message on failure
+}
+```
+
+- `ok: true` + `code: 200` → success with `data`
+- `ok: false` → failure with `message`
+
+The actual API responses are in the same format as the student API :
+
+```json
+{
+  "code": 200,
+  "token": "optional-token",
+  "message": "human-readable or empty",
+  "data": { ... }
+}
+```
+
+# Family / Student Endpoints
+
+These endpoints are accessed from a family account (`typeCompte: "F"`) to retrieve data about linked students.
+
+**Base:** `https://api.ecoledirecte.com/v3`
+
+All authenticated requests include:
+
+| Header | Value |
+|---|---|
+| `X-GTK` | Current GTK |
+| `X-Token` | Current session token |
+| `Cookie` | Session cookies |
+| `Content-Type` | `application/x-www-form-urlencoded` |
+
+---
+
+## List Messages
+
+```
+GET https://api.ecoledirecte.com/v3/familles/{familyId}/messages.awp?force=false&typeRecuperation={mailbox}&idClasseur={folderId}&orderBy=date&order=desc&query={query}&onlyRead=&page={page}&itemsPerPage={itemsPerPage}&getAll=0&verbe=get&v=4.96.3
+```
+
+### Path Parameters
+
+| Param | Description |
+|---|---|
+| `familyId` | Family account ID |
+
+### Query Parameters
+
+| Param | Default | Description |
+|---|---|---|
+| `typeRecuperation` | `received` | Mailbox: `received`, `sent`, `archived`, or `draft` |
+| `idClasseur` | `0` | Folder ID (0 = all) |
+| `query` | `""` | Search query |
+| `page` | `0` | Page number (0-based) |
+| `itemsPerPage` | `100` | Items per page |
+| `force` | `false` | Force refresh |
+| `orderBy` | `date` | Sort field |
+| `order` | `desc` | Sort direction |
+| `onlyRead` | `""` | Filter by read status |
+| `getAll` | `0` | Get all flag |
+
+### Body (`data=` payload)
+
+```json
+{}
+```
+
+### Response (normalized)
+
+```json
+{
+  "ok": true,
+  "code": 200,
+  "data": {
+    "folders": [
+      { "id": -1, "label": "Boîte de réception", "isCustom": false },
+      { "id": 1, "label": "Ma classeur", "isCustom": true }
+    ],
+    "messages": [
+      {
+        "id": 123456,
+        "mailbox": "received",
+        "read": true,
+        "subject": "Objet du message",
+        "date": "2024-01-15T10:30:00+01:00",
+        "draft": false,
+        "transferred": false,
+        "answered": false,
+        "folderId": -1,
+        "dossierId": 0,
+        "from": { "id": 789, "role": "teacher", "name": "M. Dupont" },
+        "to": [
+          { "id": 456, "name": "Mme Martin", "deliveryType": "to" }
+        ],
+        "attachmentCount": 2,
+        "attachments": [
+          { "id": 1, "name": "document.pdf", "type": "PDF" }
+        ],
+        "hasContent": true
+      }
+    ],
+    "pagination": {
+      "messagesReceivedCount": 50,
+      "messagesUnreadCount": 3,
+      "messagesSentCount": 12
+    },
+    "settings": {
+      "active": true,
+      "canParentsReadStudentMessages": false,
+      "recipients": {
+        "admin": true,
+        "students": true,
+        "families": true,
+        "teachers": true
+      }
+    }
+  }
+}
+```
+
+---
+
+## Get Message Detail
+
+```
+GET https://api.ecoledirecte.com/v3/familles/{familyId}/messages/{messageId}.awp?verbe=get&mode={mode}&v=4.96.3
+```
+
+### Path Parameters
+
+| Param | Description |
+|---|---|
+| `familyId` | Family account ID |
+| `messageId` | Message ID |
+
+### Query Parameters
+
+| Param | Default | Description |
+|---|---|---|
+| `mode` | `destinataire` | `destinataire` or `expediteur` |
+
+### Body (`data=` payload)
+
+```json
+{
+  "anneeMessages": "2024-2025"
+}
+```
+
+- `anneeMessages`: Academic year in `YYYY-YYYY` format
+
+### Response (normalized)
+
+```json
+{
+  "ok": true,
+  "code": 200,
+  "data": {
+    "id": 123456,
+    "read": true,
+    "subject": "Objet du message",
+    "contentHtml": "<p>Contenu du message...</p>",
+    "date": "2024-01-15T10:30:00+01:00",
+    "draft": false,
+    "transferred": false,
+    "answered": false,
+    "canAnswer": true,
+    "folderId": -1,
+    "dossierId": 0,
+    "from": { "name": "M. Dupont" },
+    "to": [],
+    "attachmentCount": 1,
+    "attachments": [
+      { "name": "piece-jointe.pdf" }
+    ]
+  }
+}
+```
+
+### Student Messages
+
+Same structure uses `eleves/{studentId}` as scope:
+
+```
+GET https://api.ecoledirecte.com/v3/eleves/{studentId}/messages.awp?...
+GET https://api.ecoledirecte.com/v3/eleves/{studentId}/messages/{messageId}.awp?...
+```
+
+---
+
+## Get Student Grades
+
+```
+GET https://api.ecoledirecte.com/v3/eleves/{studentId}/notes.awp?verbe=get&v=4.96.3
+```
+
+### Path Parameters
+
+| Param | Description |
+|---|---|
+| `studentId` | Student ID |
+
+### Body (`data=` payload)
+
+```json
+{}
+```
+
+### Response (normalized)
+
+```json
+{
+  "ok": true,
+  "code": 200,
+  "data": {
+    "settings": {
+      "studentAverage": true,
+      "classAverage": true,
+      "generalAverage": true,
+      "coefficientNote": true
+    },
+    "periods": [
+      {
+        "id": "PER1",
+        "label": "Trimestre 1",
+        "code": "T1",
+        "shortLabel": "T1",
+        "startDate": "2024-09-02",
+        "endDate": "2024-12-20",
+        "annual": false,
+        "closed": false,
+        "exam": false,
+        "generalAverage": "14.5",
+        "classAverage": "12.3",
+        "minAverage": "5.0",
+        "maxAverage": "19.0",
+        "rank": 8,
+        "effectif": 30,
+        "calculatedAt": "2024-12-21 10:00:00",
+        "councilDate": "2024-12-22",
+        "appreciationPP": "Très bon trimestre",
+        "appreciationCE": "Continuez ainsi",
+        "disciplines": [
+          {
+            "id": 1,
+            "code": "MAT",
+            "name": "Mathématiques",
+            "average": "15.0",
+            "classAverage": "11.5",
+            "classMin": "3.0",
+            "classMax": "19.5",
+            "coefficient": "4",
+            "rank": 5,
+            "effectif": 30,
+            "teachers": [
+              { "id": 42, "name": "M. Martin" }
+            ],
+            "appreciations": ["Bon élève"],
+            "isGroup": false,
+            "isOption": false,
+            "isSubSubject": false
+          }
+        ]
+      }
+    ],
+    "grades": [
+      {
+        "id": 789,
+        "assignment": "Contrôle sur les équations",
+        "subject": "Mathématiques",
+        "periodCode": "T1",
+        "subjectCode": "MAT",
+        "type": "Contrôle",
+        "value": "16",
+        "outOf": "20",
+        "coefficient": "1",
+        "classAverage": "12.0",
+        "minClass": "4",
+        "maxClass": "19",
+        "date": "2024-10-15",
+        "enteredAt": "2024-10-16",
+        "comment": "Bien maîtrisé",
+        "isLetterGrade": false,
+        "isWeighted": true,
+        "nonSignificant": false,
+        "elementCount": 3,
+        "hasQcm": false,
+        "hasSubjectAttachment": false,
+        "hasCorrectionAttachment": false
+      }
+    ],
+    "expired": false,
+    "classProfile": "3A"
+  }
+}
+```
+
+---
+
+## Get Student Profile
+
+```
+GET https://api.ecoledirecte.com/v3/eleves/{studentId}.awp?verbe=get&v=4.96.3
+```
+
+### Path Parameters
+
+| Param | Description |
+|---|---|
+| `studentId` | Student ID |
+
+### Body (`data=` payload)
+
+```json
+{
+  "anneeScolaire": "2024-2025"
+}
+```
+
+- `anneeScolaire`: Academic year
+
+### Response (normalized)
+
+```json
+{
+  "ok": true,
+  "code": 200,
+  "data": {
+    "id": 98765,
+    "firstName": "Marie",
+    "lastName": "Dupont",
+    "fullName": "Marie Dupont",
+    "gender": "F",
+    "boarderStatus": "Externe",
+    "birthDate": "2010-05-12",
+    "email": "marie@example.com",
+    "mobile": "0612345678",
+    "primarySchool": false,
+    "principalProfessor": false,
+    "photoUrl": "https://api.ecoledirecte.com/photo/...",
+    "classId": 111,
+    "classLabel": "3A",
+    "classIsGraded": true,
+    "establishmentId": 55
+  }
+}
+```
+
+---
+
+## List Homework Diary
+
+```
+GET https://api.ecoledirecte.com/v3/Eleves/{studentId}/cahierdetexte.awp?verbe=get&v=4.96.3
+```
+
+### Path Parameters
+
+| Param | Description |
+|---|---|
+| `studentId` | Student ID |
+
+### Body (`data=` payload)
+
+```json
+{}
+```
+
+### Response (normalized)
+
+```json
+{
+  "ok": true,
+  "code": 200,
+  "data": {
+    "days": [
+      {
+        "date": "2024-10-28",
+        "assignments": [
+          {
+            "homeworkId": 456,
+            "subject": "Mathématiques",
+            "subjectCode": "MAT",
+            "dueDate": "2024-10-28",
+            "assignedOn": "2024-10-21",
+            "toDo": true,
+            "documentsToDo": false,
+            "completed": true,
+            "interrogation": false,
+            "onlineSubmission": false,
+            "tags": ["Devoir"]
+          }
+        ]
+      }
+    ],
+    "totalAssignments": 15
+  }
+}
+```
+
+The response data is a date-keyed object: `{ "2024-10-28": [...], "2024-10-29": [...] }`.
+
+---
+
+## Get Homework Day Detail
+
+```
+GET https://api.ecoledirecte.com/v3/Eleves/{studentId}/cahierdetexte/{date}.awp?verbe=get&v=4.96.3
+```
+
+### Path Parameters
+
+| Param | Description |
+|---|---|
+| `studentId` | Student ID |
+| `date` | Date in `YYYY-MM-DD` format |
+
+### Body (`data=` payload)
+
+```json
+{}
+```
+
+### Response (normalized)
+
+```json
+{
+  "ok": true,
+  "code": 200,
+  "data": {
+    "date": "2024-10-28",
+    "subjects": [
+      {
+        "subject": "Mathématiques",
+        "subjectCode": "MAT",
+        "teacher": "M. Martin",
+        "homeworkId": 456,
+        "interrogation": false,
+        "blogActive": false,
+        "maxSubmissionDays": 7,
+        "homework": {
+          "homeworkId": 456,
+          "html": "<p>Faire les exercices 1 à 5 page 42</p>",
+          "onlineSubmission": false,
+          "assignedOn": "2024-10-21",
+          "completed": true,
+          "documents": [
+            { "id": 1, "name": "exercices.pdf", "url": "https://...", "extension": "pdf" }
+          ],
+          "curriculumElements": [],
+          "manualLinks": [],
+          "submittedDocuments": [],
+          "tags": ["Devoir"]
+        },
+        "lessonContent": {
+          "lessonId": 789,
+          "html": "<p>Cours sur les équations du second degré</p>",
+          "documents": []
+        }
+      }
+    ],
+    "homeworkCount": 1,
+    "lessonContentCount": 1
+  }
+}
+```
+
+---
+
+## Get School Life
+
+Absences, lateness, sanctions, and encouragements.
+
+```
+GET https://api.ecoledirecte.com/v3/eleves/{studentId}/viescolaire.awp?verbe=get&v=4.96.3
+```
+
+### Path Parameters
+
+| Param | Description |
+|---|---|
+| `studentId` | Student ID |
+
+### Body (`data=` payload)
+
+```json
+{}
+```
+
+### Response (normalized)
+
+```json
+{
+  "ok": true,
+  "code": 200,
+  "data": {
+    "absencesRetards": [
+      {
+        "id": 1,
+        "typeElement": "ABSENCE",
+        "date": "2024-10-15",
+        "label": "Absence non justifiée",
+        "motif": "Maladie",
+        "justifie": false,
+        "par": "M. Dupont",
+        "commentaire": "...",
+        "aFaire": "..."
+      }
+    ],
+    "dispenses": [],
+    "sanctionsEncouragements": [
+      {
+        "id": 2,
+        "typeElement": "SANCTION",
+        "date": "2024-10-10",
+        "label": "Retenue",
+        "motif": "Retard répété",
+        "par": "Mme Martin",
+        "pointsPermis": -2
+      }
+    ],
+    "settings": {
+      "justificationEnLigne": true,
+      "absenceCommentaire": true,
+      "sanctionsVisible": true,
+      "encouragementsVisible": true,
+      "afficherPermisPoint": true
+    }
+  }
+}
+```
+
+---
+
+## List Correspondence Book
+
+```
+GET https://api.ecoledirecte.com/v3/eleves/{studentId}/eleveCarnetCorrespondance.awp?verbe=get&v=4.96.3
+```
+
+### Path Parameters
+
+| Param | Description |
+|---|---|
+| `studentId` | Student ID |
+
+### Body (`data=` payload)
+
+```json
+{}
+```
+
+### Response (normalized)
+
+```json
+{
+  "ok": true,
+  "code": 200,
+  "data": {
+    "correspondences": [
+      {
+        "studentName": "Marie Dupont",
+        "dateCreated": "2024-10-15",
+        "content": "Information importante...",
+        "type": "INFO",
+        "signatureRequired": true,
+        "fileUrl": "https://...",
+        "author": { "id": 42, "role": "teacher", "name": "M. Martin" }
+      }
+    ],
+    "followUps": []
+  }
+}
+```
+
+---
+
+## List Appointment Sessions
+
+```
+GET https://api.ecoledirecte.com/v3/E/{studentId}/sessionsRdv.awp?verbe=get&v=4.96.3
+```
+
+### Path Parameters
+
+| Param | Description |
+|---|---|
+| `studentId` | Student ID |
+
+### Body (`data=` payload)
+
+```json
+{}
+```
+
+### Response (normalized)
+
+```json
+{
+  "ok": true,
+  "code": 200,
+  "data": {
+    "sessions": [ { ... } ],
+    "authors": [ { ... } ],
+    "invitees": [ { ... } ],
+    "unavailableInvitees": [ { ... } ]
+  }
+}
+```
+
+---
+
+## Get Timetable
+
+```
+GET https://api.ecoledirecte.com/v3/E/{studentId}/emploidutemps.awp?verbe=get&v=4.96.3
+```
+
+### Path Parameters
+
+| Param | Description |
+|---|---|
+| `studentId` | Student ID |
+
+### Body (`data=` payload)
+
+```json
+{
+  "dateDebut": "2024-10-28",
+  "dateFin": "2024-11-03"
+}
+```
+
+- `dateDebut`: Start date (inclusive)
+- `dateFin`: End date (inclusive)
+
+### Response (normalized)
+
+```json
+{
+  "ok": true,
+  "code": 200,
+  "data": {
+    "days": [
+      {
+        "date": "2024-10-28",
+        "events": [
+          {
+            "id": 123,
+            "label": "Cours",
+            "subject": "Mathématiques",
+            "subjectCode": "MAT",
+            "courseType": "Cours",
+            "startDate": "2024-10-28T08:00:00+01:00",
+            "endDate": "2024-10-28T09:00:00+01:00",
+            "color": "#FF5733",
+            "dispensable": false,
+            "dispensed": false,
+            "teacher": "M. Martin",
+            "room": "Salle 101",
+            "className": "3A",
+            "classId": 111,
+            "groupName": "Groupe A",
+            "flexible": false,
+            "modified": false,
+            "hasLessonContent": true,
+            "hasHomework": true,
+            "cancelled": false
+          }
+        ]
+      }
+    ],
+    "totalEvents": 20
+  }
+}
+```
+
+The raw response is an array of event objects.
+
+---
+
+## Get Class Life
+
+```
+GET https://api.ecoledirecte.com/v3/Classes/{classId}/viedelaclasse.awp?verbe=get&v=4.96.3
+```
+
+### Path Parameters
+
+| Param | Description |
+|---|---|
+| `classId` | Class ID |
+
+### Body (`data=` payload)
+
+```json
+{}
+```
+
+### Response (normalized)
+
+```json
+{
+  "ok": true,
+  "code": 200,
+  "data": {
+    "sections": { ... },
+    "sectionKeys": ["cahierdetexte", "notes", "viescolaire"],
+    "empty": false
+  }
+}
+```
+
+The raw `data` object is returned as-is with its section keys preserved.
+
+---
+
+## List Family Documents
+
+```
+GET https://api.ecoledirecte.com/v3/familledocuments.awp?archive={archive}&verbe=get&v=4.96.3
+```
+
+### Query Parameters
+
+| Param | Default | Description |
+|---|---|---|
+| `archive` | `""` | Archive year (empty for current) |
+
+### Body (`data=` payload)
+
+```json
+{}
+```
+
+### Response (normalized)
+
+```json
+{
+  "ok": true,
+  "code": 200,
+  "data": {
+    "factures": [
+      { "id": 1, "libelle": "Facture octobre", "date": "2024-10-01", "signatureDemandee": false }
+    ],
+    "notes": [ ... ],
+    "viescolaire": [ ... ],
+    "administratifs": [ ... ],
+    "inscriptions": [
+      { "id": 5, "libelle": "Autorisation sortie", "type": "INSCR_DOC_A_SIGNER", "signatureDemandee": true }
+    ],
+    "entreprises": [],
+    "listesPiecesAVerser": []
+  }
+}
+```
+
+---
+
+## List Family Invoices
+
+```
+GET https://api.ecoledirecte.com/v3/factures.awp?verbe=get&v=4.96.3
+```
+
+### Body (`data=` payload)
+
+```json
+{}
+```
+
+### Response (normalized)
+
+```json
+{
+  "ok": true,
+  "code": 200,
+  "data": {
+    "invoices": [
+      {
+        "id": 1,
+        "libelle": "Facture octobre 2024",
+        "date": "2024-10-01",
+        "type": "Facture",
+        "signatureDemandee": false
+      }
+    ]
+  }
+}
+```
+
+---
+
+## Download File
+
+```
+GET https://api.ecoledirecte.com/v3/telechargement.awp?verbe=get&fichierId={fileId}&leTypeDeFichier={fileType}&v=4.96.3&cToken={cToken}
+```
+
+### Query Parameters
+
+| Param | Description |
+|---|---|
+| `fichierId` | File/document ID |
+| `leTypeDeFichier` | File type category (see mapping below) |
+| `cToken` | Optional content token for some files |
+
+### File Type Mapping
+
+| Document Category | `leTypeDeFichier` value |
+|---|---|
+| Notes / bulletins | `Note` |
+| Invoices (factures) | `Facture` |
+| School life (viescolaire) | `VieScolaire` |
+| Administrative | `""` (empty) |
+| Inscriptions | Entry's own `type` field (e.g. `INSCR_DOC_A_SIGNER`) |
+| Companies (entreprises) | `""` (empty) |
+
+### Headers
+
+In addition to standard headers, optional query params:
+- `forceDownload`: Force download flag
+- `archive`: Archive year
+- `anneeArchive`: Archive year (alternative)
+
+### Response
+
+The response is binary file content with appropriate `Content-Type` and `Content-Disposition` headers.
